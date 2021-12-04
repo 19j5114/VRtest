@@ -57,6 +57,7 @@ video.pause();
 
 const btnPlay = document.getElementById("play");  // 再生ボタンの取得
 btnPlay.addEventListener("click", (e) => {        // クリックされたら
+  video.setAttribute('autoplay', 'true');　　　　　// オートプレイの追加
   video.play();                                   // 動画を再生
   if(playFlag == 0){
     setTimeout(setSphere, 28000);
