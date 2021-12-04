@@ -48,7 +48,9 @@
   var objDel;
   let playFlag = 0;
   let sphereFlag = 0;
-  
+  const delmuted = () => {
+    video.muted = false;
+  } 
 </script>
 
   <!-- 動画の再生・停止のための JavaScript -->
@@ -61,8 +63,8 @@ btnPlay.addEventListener("click", (e) => {        // クリックされたら
   video.setAttribute('autoplay', 'true');　　　　　// オートプレイの追加
   video.play();                                   // 動画を再生
   if(playFlag == 0){
+    setTimeout(delmuted, 1000);
     setTimeout(setSphere, 28000);
-    video.muted = false;                          // ミュートの解除
   }
   playFlag = 1;
 });
