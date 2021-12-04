@@ -62,9 +62,9 @@ btnPlay.addEventListener("click", (e) => {        // クリックされたら
   video.play();                                   // 動画を再生
   if(playFlag == 0){
     setTimeout(setSphere, 28000);
+    video.muted = false;                          // ミュートの解除
   }
   playFlag = 1;
-  video.muted = false;                            // ミュートの解除
 });
 const btnStop = document.getElementById("stop");  // 停止ボタンの取得
 btnStop.addEventListener("click", (e) => {        // クリックされたら
