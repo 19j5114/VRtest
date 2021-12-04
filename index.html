@@ -53,6 +53,8 @@
   <!-- 動画の再生・停止のための JavaScript -->
 <script>
 const video = document.getElementById("video");   // 動画の取得
+video.pause();
+
 const btnPlay = document.getElementById("play");  // 再生ボタンの取得
 btnPlay.addEventListener("click", (e) => {        // クリックされたら
   video.play();                                   // 動画を再生
@@ -68,7 +70,9 @@ btnStop.addEventListener("click", (e) => {        // クリックされたら
 const btnRepeat = document.getElementById("link");// ボタンの取得
 btnRepeat.addEventListener("click", (e) => {      // クリックされたら
   video.src = "AirPort.mp4";                // 動画を停止
-  setSphere();
+  if(sphereFlag == 0){
+    setSphere();
+  }
 });
 </script>
 
